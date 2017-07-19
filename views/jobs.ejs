@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <table>
+      <tr>
+        <td><%= Name %></td>
+        <td><%= Description %></td>
+        <td><%= Category %></td>
+        <td><%= Type %></td>
+        <td><%= Location.0 %></td>
+        <td> <%=Location.1 %></td>
+        <td> <%=Hourlyfee %></td>
+        <td> <%= PreferedDate %></td>
+        
+        <td><%= TartDate %></td></tr>
+        <td><%= EndDate %></td>
+        <td><%= WorkHours %></td>
+      </tr>
+      <% for(var obj of jobs ) {
+%>
+<tr> <td><%= obj.name %></td>
+        <td><%= obj.description %></td>
+        <td><%= obj.category %></td>
+        <td><%= obj.type %></td>
+        <td><%= obj.location.0 %></td>
+        <td><%=obj.location.1 %></td>
+        <td><%=obj.hourlyfee %></td>
+        <td><%= obj.preferedDate.0 %></td>
+        <td><%= obj.preferedDate.1 %></td>
+        <td><%= obj.preferedDate.2 %></td>
+        <td><%= obj.preferedDate.3 %></td>
+        <td><%= obj.preferedDate.4 %></td>
+        <td><%= obj.preferedDate.5 %></td>
+        <td><%= obj.preferedDate.6 %></td>
+        <td><%= obj.startDate %></td></tr>
+        <td><%= obj.endDate %></td>
+        <td><%= obj.workHours %></td>
+<%
+      }
+      %>
+      
+    </table>
+  </body>
+</html>
